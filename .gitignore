@@ -1,0 +1,6 @@
+# Ignore the config file with credentials
+login_notify.conf
+
+# Ignore temporary flag and log files
+*.flag
+*.log
