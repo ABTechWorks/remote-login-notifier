@@ -2,7 +2,6 @@
 
 PowerShell script that monitors a remote computer and sends email notifications when it comes online. Configurable via a separate configuration file to keep credentials secure.
 
----
 
 ## Setup Instructions
 
@@ -11,6 +10,7 @@ PowerShell script that monitors a remote computer and sends email notifications 
 ```powershell
 git clone https://github.com/<YourUsername>/RemoteLoginNotifier.git
 cd RemoteLoginNotifier
+done
 
 2. Create your configuration file
 
@@ -42,10 +42,10 @@ $ConfigFile = "$env:USERPROFILE\Documents\login_notify.conf"
 4. Run the script
 
 Open PowerShell and run:
-
+---
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 .\remote_login_notifier.ps1
-
+done
     The script checks every 5 minutes if the target computer is online and sends an email notification.
 
     Logs are saved in $env:TEMP\login_monitor.log.
