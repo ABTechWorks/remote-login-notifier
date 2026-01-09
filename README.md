@@ -10,9 +10,10 @@ PowerShell script that monitors a remote computer and sends email notifications 
 ```powershell
 git clone https://github.com/<YourUsername>/RemoteLoginNotifier.git
 cd RemoteLoginNotifier
+
 ---
 
-2. Create your configuration file
+## 2. Create your configuration file
 
 Create a file called login_notify.conf in a safe location (e.g., your Documents folder):
 ```powershell
@@ -30,8 +31,10 @@ GmailAddress=youremail@gmail.com
 
 # Gmail App Password (16 characters, must have 2FA enabled)
 GmailAppPassword=xxxxxxxxxxxxxxxx
+
 ---
-    Important: Never commit your real login_notify.conf to GitHub.
+
+   ## Important: Never commit your real login_notify.conf to GitHub.
 
 3. Update the script to point to your config file
 
@@ -45,8 +48,10 @@ Open PowerShell and run:
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 .\remote_login_notifier.ps1
+
 ---
-    The script checks every 5 minutes if the target computer is online and sends an email notification.
+
+ ##   The script checks every 5 minutes if the target computer is online and sends an email notification.
 
     Logs are saved in $env:TEMP\login_monitor.log.
 
